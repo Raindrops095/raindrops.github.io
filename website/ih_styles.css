@@ -1,0 +1,168 @@
+body {
+    font-family: Geneva, Tahoma, sans-serif;
+    font-size: 80%;
+    color: #0c0945;
+    margin: 0px;
+   padding: 5px;
+   overflow-x: hidden;
+
+ }
+ .button2 {
+   color: orange;
+   background-color: black;
+   margin: 8px 4px;
+ }
+ ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+ }
+ 
+ li {
+   float: left;
+ }
+ 
+ li a {
+   display: block;
+   padding: 8px;
+   background-color: #dddddd;
+ }
+ aside {
+   width: 30%;
+   padding-left: 15px;
+   margin-left: 15px;
+   float: right;
+   font-style: italic;
+   background-color: lightgray;
+ }
+
+ h1 {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 120%;
+    color: #334d55;
+    margin: 0px;
+   padding: 0px;
+
+ }
+ 
+ 
+ h2 {
+    font-family: Geneva, Tahoma, sans-serif;
+    font-size: 120%;
+    color: #334d55;
+    margin: 0px;
+   padding: 0px;
+
+ }
+ 
+ h3 {
+    font-family: Geneva, Tahoma, sans-serif;
+    font-size: 110%;
+    color: #334d55;
+    margin: 0px;
+   padding: 0px;
+
+ }
+ h4 {
+    font-family: Geneva, Tahoma, sans-serif;
+    font-size: 100%;
+    color: #334d55;
+    margin: 0px;
+   padding: 0px;
+
+ }
+ 
+ 
+ footer {
+    font-family: Geneva, Tahoma, sans-serif;
+    background-color: #a7fff9;
+    padding: 7px;
+   border-bottom: 1px solid #637e8f;
+   border-top: 1px solid #637e8f;
+
+ }
+ 
+ main {
+    padding: 5px;
+    border-top: 1px solid #637e8f;
+    float: left;
+    width: 55%;
+    height: 100%;
+ }
+ 
+ main table {
+    padding: 2px;
+ }
+ 
+ main td {
+    padding: 2px;
+ }
+ 
+ header {
+    padding: 7px;
+    border-bottom: 5px solid black;
+    width: 100%;
+ }
+ 
+ nav {
+    padding: 5px;
+    border-bottom: 1px solid #E2EAEF;
+    border-top: 1px solid #E2EAEF;
+    border-right: 1px solid #E2EAEF;
+    background-color: #d3d8ff;
+    width: 20%;
+ }
+
+ footer {
+    font-family: Geneva, Tahoma, sans-serif;
+    clear: both;
+    text-align: center;
+    padding: 7px;
+    border-bottom: 1px solid #E2EAEF;
+    border-top: 1px solid #E2EAEF;
+    background-color: #f3f6f8;
+    width: 100%;
+ }
+ 
+ a {
+    color: #006c8c;
+    text-decoration: none;
+ }
+ 
+ a:link {
+    color: #006c8c;
+    text-decoration: none;
+ }
+ 
+ a:visited {
+    color: #003049;
+    text-decoration: none;
+ }
+ 
+ a:hover {
+    color: #0088bb;
+    text-decoration: underline;
+ }
+ input {
+    border: 1px solid currentcolor;
+ }
+ 
+ input[type=submit] {
+    font-family: Verdana, Arial, sans-serif;
+ }
+ 
+ input:required:invalid {
+    border: 1px solid red;
+ }
+ 
+ input:required:valid {
+    border: 1px solid limegreen;
+ }
+ 
+ input:focus {
+    background-color: #e6f7fa;
+ }
+ 
+ 
+ 
