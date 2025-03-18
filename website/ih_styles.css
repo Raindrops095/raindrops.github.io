@@ -14,9 +14,10 @@ body {
  }
  ul {
    list-style-type: none;
-   margin: 0;
-   padding: 0;
+   margin: 0px;
+   padding: 0px;
    overflow: hidden;
+   background-color: #767688;
  }
  
  li {
@@ -25,13 +26,11 @@ body {
  
  li a {
    display: block;
-   padding: 8px;
-   background-color: #dddddd;
  }
  aside {
    width: 30%;
-   padding-left: 15px;
-   margin-left: 15px;
+   padding-left: 0px;
+   margin-left: 0px;
    float: right;
    font-style: italic;
    background-color: lightgray;
@@ -100,8 +99,7 @@ body {
  }
  
  header {
-    padding: 7px;
-    border-bottom: 5px solid black;
+    padding: 0px;
     width: 100%;
  }
  
@@ -163,6 +161,16 @@ body {
  input:focus {
     background-color: #e6f7fa;
  }
- 
+ .buttonhead{
+   background-color: #767688;
+   border:solid;
+   border-color:#656572;
+  color: white;
+  padding: 5px 10px;
+  display: inline-block;
+  font-size: 18px;
+  margin: 1px 0px;
+  cursor: pointer;
+ }
  
  
