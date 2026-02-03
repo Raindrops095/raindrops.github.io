@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>This is a website</title>
+
+    <link rel="stylesheet" href="website/IBM.css">
+</head>
+
+<header> 
+    <ul>
+        <li><a href="./index.html"><button class= "buttonhead">home</button></a></li>
+        <li><a href="./projects.html"><button class= "buttonhead">projects</button></a></li>
+        <li><a href="./about.html"><button class = "buttonhead">about</button></a></li>
+      </ul>
+</header>
+<body>
+    //place for users to add words
+    <h3>Enter in your words</h3>
+    <p> a = <input name="user_Input" type="text" id="a"> </p>
+    <p> b = <input name="user_Input" type="text" id="b"> </p>
+    <p> c = <input name="user_Input" type="text" id="c"> </p>
+    <p> d = <input name="user_Input" type="text" id="d"> </p>
+    <p> e = <input name="user_Input" type="text" id="e"> </p>
+    <p> f = <input name="user_Input" type="text" id="f"> </p>
+    <p> g = <input name="user_Input" type="text" id="g"> </p>
+    <p> h = <input name="user_Input" type="text" id="h"> </p>
+    <p> i = <input name="user_Input" type="text" id="i"> </p>
+    <p> j = <input name="user_Input" type="text" id="j"> </p>
+    <p> k = <input name="user_Input" type="text" id="k"> </p>
+    <p> l = <input name="user_Input" type="text" id="l"> </p>
+    <p> m = <input name="user_Input" type="text" id="m"> </p>
+    <p> n = <input name="user_Input" type="text" id="n"> </p>
+    <p> o = <input name="user_Input" type="text" id="o"> </p>
+    <p> p = <input name="user_Input" type="text" id="p"> </p>
+    <p> q = <input name="user_Input" type="text" id="q"> </p>
+    <p> r = <input name="user_Input" type="text" id="r"> </p>
+    <p> s = <input name="user_Input" type="text" id="s"> </p>
+    <p> t = <input name="user_Input" type="text" id="t"> </p>
+    <p> u = <input name="user_Input" type="text" id="u"> </p>
+    <p> v = <input name="user_Input" type="text" id="v"> </p>
+    <p> w = <input name="user_Input" type="text" id="w"> </p>
+    <p> y = <input name="user_Input" type="text" id="y"> </p>
+    <p> x = <input name="user_Input" type="text" id="x"> </p>
+    <p> z = <input name="user_Input" type="text" id="z"> </p>
+
+
+    <p> Enter 3 letters: <input name="ibm_Input" type="text" id="IBM" maxlength=3></input></p>
+
+    <select id="Lines">
+    <option value="">-- select how many lines you would like --</option>
+    <option value="a">4</option>
+    <option value="b">7</option>
+    <option value="c">10</option>
+    <option value="c">13</option>
+    <option value="c">16</option>
+    </select>
+
+	
+	<button onclick="submitPoem()"> Submit </button>
+
+
+</body>
+<script>
+  dic = {"a":"","n":"","b":"","o":"","c":"","p":"","d":"","q":"","e":"","r":"","f":"","s":"","g":"","t":"","h":"","u":"","i":"","v":"","j":"","w":"","k":"","x":"","l":"","y":"","m":"","z":""};
+  const input = document.getElementById("a");
+  const output = document.getElementById("output");
+
+
+    var i = 0;
+    var user_word = document.getElementsByName("user_Input");
+    for(let letter in dic){
+ 		dic[letter] = user_word[i].value.toString();
+ 		i++;
+ 	}
+
+</script>
+<footer>
+    <h1>this is the footer</h1>
+</footer>
