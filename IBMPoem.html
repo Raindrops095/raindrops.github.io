@@ -78,42 +78,48 @@
 
   function generatePoem(dic, linesAmount, originalThree) {
 
-    function abc(nextWord){
-      currentLine = [...nextWord]
-      .map(letter => dic[letter] || "")
-      .join(" ")
-      .trim();
-
-    poemLines.push(currentLine);
-    return currentLine.split(" ")[0];
-    }
   const poemLines = [];
+  const wordCount = {};
 
- 
+  function styleLine(line) {
+    return line
+      .split(" ")
+      .map(word => {
+        if (!word) return "";
+
+        if (!wordCount[word]) {
+          wordCount[word] = 16;
+        }
+        wordCount[word]++;
+
+        return `<span style="font-size:${wordCount[word]}px">${word}</span>`;
+      })
+      .join(" ");
+  }
+
+  function nextLineGen(nextWord) {
+    const currentLine = [...nextWord]
+      .map(letter => dic[letter] || "").join(" ").trim();
+
+    poemLines.push(styleLine(currentLine));
+    return currentLine.split(" ")[0];
+  }
+
   originalThree = originalThree.toLowerCase();
-  
 
-  
   let currentLine = [...originalThree]
-    .map(letter => dic[letter] || "")
-    .join(" ")
-    .trim();
+    .map(letter => dic[letter] || "").join(" ").trim();
 
-  poemLines.push(currentLine);
-  firstWord = currentLine.split(" ")[0];
-  secWord = currentLine.split(" ")[1];
-  thirdWord = currentLine.split(" ")[2];
+  poemLines.push(styleLine(currentLine));
 
-  console.log(secWord);
-  console.log(thirdWord);
-  // Generate remaining lines
-  for (let i = 1; i < linesAmount; i+=3) {
+  let firstWord = currentLine.split(" ")[0];
+  let secWord = currentLine.split(" ")[1];
+  let thirdWord = currentLine.split(" ")[2];
 
-    firstWord = abc(firstWord);
-    secWord = abc(secWord);
-    thirdWord = abc(thirdWord);
-    
-  
+  for (let i = 1; i < linesAmount; i += 3) {
+    firstWord = nextLineGen(firstWord);
+    secWord = nextLineGen(secWord);
+    thirdWord = nextLineGen(thirdWord);
   }
 
   return poemLines.join("<br>");
