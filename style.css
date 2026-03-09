@@ -8,38 +8,7 @@
 body {
     line-height: 1.6;
     scroll-behavior: smooth;
-    padding-top: 50px;
-    flex-direction: column;
-    justify-content: center;
 }
-
-.pro {
-    text-align: center; 
-    background: #222;
-    color: white;
-    padding: 10%;
-    font-size: 150%;
-    
-}
-
-.pro input[type=text] {
-    border: 2px solid rgb(29, 29, 68);
-    background: #e3e3e3;
-    color: #000000;
-    font-size:100%;
-}
-
-.pro p {
-    margin: 5px;
-    
-}
-
-.pro select,
-.pro button {
-    margin-top: 10px;
-    font-size: 100%;
-}
-
 
 header {
     background: #111;
@@ -81,6 +50,20 @@ nav {
     color: #00adb5;
 }
 
+.section {
+    padding: 100px 20px;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.home {
+    background: #222;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 span {
     color: #00adb5;
 }
@@ -95,6 +78,58 @@ button {
     transition: 0.3s;
 }
 
+button:hover {
+    background: #007b80;
+}
+
+.project-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.about {
+    background: #33343e;
+    color: white;
+}
+
+.projects {
+    background: #33343e;
+    color: #ffffff
+}
+
+.project-card {
+    background: #4f4f4f;
+    padding: 20px;
+    width: 250px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.project-container a:visited {
+  color: white;
+  font-weight: bold;
+  
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+}
+
+.contact input,
+.contact textarea {
+    margin: 10px 0;
+    padding: 10px;
+}
 
 footer {
     background: #111;

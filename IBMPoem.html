@@ -6,42 +6,34 @@
     <link rel="stylesheet" href="IBM.css">
   </head>
 
-<header> 
-    <ul>
-        <li><a href="./index.html"><button class="buttonhead">home</button></a></li>
-        <li><a href="./projects.html"><button class="buttonhead">projects</button></a></li>
-        <li><a href="./about.html"><button class="buttonhead">about</button></a></li>
-    </ul>
-</header>
-
 <body>
+  <header>
+        <nav>
+            <h2 class="logo">Raindrops Profolio</h2>
+            <ul class="nav-links">
+                <li><a href="./index.html#home" class="nav-link active">Home</a></li>
+                <li><a href="./index.html#about" class="nav-link">About</a></li>
+                <li><a href="./index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="./index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="pro" class="section pro">
     <h3>Enter in your words</h3>
-    <p> a = <input name="userInput" type="text" id="a"> </p>
-    <p> b = <input name="userInput" type="text" id="b"> </p>
-    <p> c = <input name="userInput" type="text" id="c"> </p>
-    <p> d = <input name="userInput" type="text" id="d"> </p>
-    <p> e = <input name="userInput" type="text" id="e"> </p>
-    <p> f = <input name="userInput" type="text" id="f"> </p>
-    <p> g = <input name="userInput" type="text" id="g"> </p>
-    <p> h = <input name="userInput" type="text" id="h"> </p>
-    <p> i = <input name="userInput" type="text" id="i"> </p>
-    <p> j = <input name="userInput" type="text" id="j"> </p>
-    <p> k = <input name="userInput" type="text" id="k"> </p>
-    <p> l = <input name="userInput" type="text" id="l"> </p>
-    <p> m = <input name="userInput" type="text" id="m"> </p>
-    <p> n = <input name="userInput" type="text" id="n"> </p>
-    <p> o = <input name="userInput" type="text" id="o"> </p>
-    <p> p = <input name="userInput" type="text" id="p"> </p>
-    <p> q = <input name="userInput" type="text" id="q"> </p>
-    <p> r = <input name="userInput" type="text" id="r"> </p>
-    <p> s = <input name="userInput" type="text" id="s"> </p>
-    <p> t = <input name="userInput" type="text" id="t"> </p>
-    <p> u = <input name="userInput" type="text" id="u"> </p>
-    <p> v = <input name="userInput" type="text" id="v"> </p>
-    <p> w = <input name="userInput" type="text" id="w"> </p>
-    <p> x = <input name="userInput" type="text" id="x"> </p>
-    <p> y = <input name="userInput" type="text" id="y"> </p>
-    <p> z = <input name="userInput" type="text" id="z"> </p>
+    <p> a = <input name="userInput" type="text" id="a">  n = <input name="userInput" type="text" id="n"> </p>
+    <p> b = <input name="userInput" type="text" id="b">  o = <input name="userInput" type="text" id="o"> </p>
+    <p> c = <input name="userInput" type="text" id="c">  p = <input name="userInput" type="text" id="p">  </p>
+    <p> d = <input name="userInput" type="text" id="d">  q = <input name="userInput" type="text" id="q">  </p>
+    <p> e = <input name="userInput" type="text" id="e">  r = <input name="userInput" type="text" id="r"> </p>
+    <p> f = <input name="userInput" type="text" id="f">  s = <input name="userInput" type="text" id="s"> </p>
+    <p> g = <input name="userInput" type="text" id="g">  t = <input name="userInput" type="text" id="t"> </p>
+    <p> h = <input name="userInput" type="text" id="h">  u = <input name="userInput" type="text" id="u"> </p>
+    <p> i = <input name="userInput" type="text" id="i">  v = <input name="userInput" type="text" id="t">  </p>
+    <p> j = <input name="userInput" type="text" id="j">  w = <input name="userInput" type="text" id="w">   </p>
+    <p> k = <input name="userInput" type="text" id="k">  x = <input name="userInput" type="text" id="x">  </p>
+    <p> l = <input name="userInput" type="text" id="l">  y = <input name="userInput" type="text" id="y">  </p>
+    <p> m = <input name="userInput" type="text" id="m">  z = <input name="userInput" type="text" id="z"> </p>
+    
 
     <p> Enter 3 letters: <input name="threeInput" type="text" id="IBM" maxlength="3"></p>
 
@@ -56,13 +48,13 @@
 
     <button onclick="submitPoem()">Submit</button>
     <p id="IBMPoem"></p>
-
+    </section>
 </body>
 
 <script>
   function getInput() {
     const dic = {
-      "a": "", "b": "", "c": "", "d": "", "e": "", "f": "", "g": "", "h": "", "i": "", "j": "", "k": "", "l": "", "m": "", "n": "", "o": "", "p": "", "q": "", "r": "", "s": "", "t": "", "u": "", "v": "", "w": "", "x": "", "y": "", "z": ""
+      "a": "", "n": "", "b": "","o": "", "c": "", "p": "", "d": "", "q": "", "e": "", "r": "", "f": "",  "s": "",  "g": "", "t": "", "h": "", "u": "", "i": "", "v": "", "j": "", "w": "", "k": "", "x": "", "l": "",  "y": "", "m": "", "z": ""
     };
 
     const userWords = document.getElementsByName("userInput");

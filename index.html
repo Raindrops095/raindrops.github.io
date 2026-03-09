@@ -1,27 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-
-  <head>
-    <title>This is a website</title>
-
-    <link rel="stylesheet" href="website/ih_styles.css">
+<head>
+    <meta charset="UTF-8">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
-
-<header> 
-    <ul>
-        <li><a href="./index.html"><button class= "buttonhead">home</button></a></li>
-        <li><a href="./projects.html"><button class= "buttonhead">projects</button></a></li>
-        <li><a href="./about.html"><button class = "buttonhead">about</button></a></li>
-      </ul>
-</header>
-<aside> 
-    <h1>this is the aside</h1>
-</aside>
 <body>
-    <h1?>No clue how you found this if this is not myself.</h1>
-    <br>
-    <a href="https://www.youtube.com/watch?v=E4WlUXrJgy4"><button class="button2">Click Me</button></a>
+
+    <header>
+        <nav>
+            <h2 class="logo">MyWebPro</h2>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="section home">
+        <h1>Hello, I'm <span>Raindrops</span></h1>
+        <p>CS Student, sleep deprived</p>
+        <button onclick="scrollToSection('contact')">Do you have cats photos? Send them here</button>
+    </section>
+
+    <section id="about" class="section about">
+        <h2>About Me</h2>
+        <p>
+            Will do later
+        </p>
+    </section>
+
+    <section id="projects" class="section projects">
+        <h2><span>My Projects</span></h2>
+        <div class="project-container">
+            <a href="IBMPoem.html"><div class="project-card">
+                <h3>IBM Poem</h3>
+                <p>You input words and it generates a poem based on the words/letters.</p>
+            </div> </a>
+            <div class="project-card">
+                <h3>Kindle app</h3>
+                <p>Short description.</p>
+            </div>
+            <a href="BlackoutPoems.html"><div class="project-card">
+                <h3>Black Out Poem</h3>
+                <p>Blackout Poem Generator. (Link does not work will update when completed)</p>
+            </div></a>
+        </div>
+        <div class="project-container">
+            <div class="project-card">
+                <h3>Calcultor</h3>
+                <p>It's just a calculator. It does basic arthmtic. (look I see it everwhere I had to)</p>
+            </div>
+            <div class="project-card">
+                <h3>5</h3>
+                <p>Short description.</p>
+            </div>
+            <div class="project-card">
+                <h3>6</h3>
+                <p>Short description.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact">
+        <h2>Contact Me</h2>
+        <h1>do later</h1>
+    </section>
+
+    <footer>
+        <p>Hello there</p>
+    </footer>
+
 </body>
-<footer>
-    <h1>this is the footer</h1>
-</footer>
+</html>
