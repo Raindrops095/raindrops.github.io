@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Blackout Poetry</title>
+<link rel="stylesheet" href="blackoutPoems.css">
+</head>
+
+<body>
+<nav>
+    <h2 class="logo">Raindrops Profolio</h2>
+    <ul class="nav-links"> 
+        <li><a href="./index.html#home" class="nav-link active">Home</a></li>
+        <li><a href="./index.html#about" class="nav-link">About</a></li>
+        <li><a href="./index.html#projects" class="nav-link">Projects</a></li>
+        <li><a href="./index.html#contact" class="nav-link">Contact</a></li>
+    </ul>
+</nav>
+
+<h1>Blackout Poetry Generator</h1>
+
+<button id="modeToggle">Switch to Upload Mode</button>
+
+<div id="textMode">
+    <textarea id="manualText" placeholder="Write your text here..."></textarea>
+    <br>
+    <button onclick="loadManualText()">Load Text</button>
+</div>
+
+<div id="uploadMode" style="display:none;">
+    <input type="file" id="fileInput">
+</div>
+
+<div id="textContainer"></div>
+
+<br>
+<button onclick="generatePoem()">Generate Poem</button>
+
+<label for="borderStyle">Choose a border style:</label>
+<select id="borderStyle">
+    <option value="none">No Border</option>
+    <option value="solid">Solid Border</option>
+    <option value="double">Double Border</option>
+    <option value="dashed">Ridge Border</option>
+</select>
+
+<label for="borderColor">Choose a color:</label>
+<select id="borderColor">
+    <option value="black">Black</option>
+    <option value="green">Green</option>
+    <option value="red">Red</option>
+    <option value="purple">Purple</option>
+    <option value="blue">Blue</option>
+</select>
+
+<h3>Your Poem:</h3>
+<div id="poemOutput"></div>
+
+
+<script>
+
+const modeToggle = document.getElementById("modeToggle");
+const textMode = document.getElementById("textMode");
+const uploadMode = document.getElementById("uploadMode");
+const fileInput = document.getElementById("fileInput");
+const textContainer = document.getElementById("textContainer");
+
+let isUploadMode = false;
+let isDragging = false;
+let blackoutMode = true;
+
+modeToggle.addEventListener("click", function() {
+    isUploadMode = !isUploadMode;
+
+    if (isUploadMode) {
+        textMode.style.display = "none";
+        uploadMode.style.display = "block";
+        modeToggle.textContent = "Switch to Write Mode";
+    } else {
+        textMode.style.display = "block";
+        uploadMode.style.display = "none";
+        modeToggle.textContent = "Switch to Upload Mode";
+    }
+});
+
+fileInput.addEventListener("change", function(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        displayText(e.target.result);
+    };
+    reader.readAsText(file);
+});
+
+function loadManualText() {
+    const text = document.getElementById("manualText").value;
+    if (text.trim() !== "") {
+        displayText(text);
+    }
+}
+
+function displayText(text) {
+    textContainer.innerHTML = "";
+
+    const tokens = text.match(/\S+\s*|\s+/g);
+
+    tokens.forEach(token => {
+        const span = document.createElement("span");
+        span.textContent = token;
+        span.classList.add("word");
+
+        span.addEventListener("mousedown", function() {
+            isDragging = true;
+            blackoutMode = !span.classList.contains("blacked");
+            toggleBlackout(span);
+        });
+
+        span.addEventListener("mouseover", function() {
+            if (isDragging) {
+                toggleBlackout(span);
+            }
+        });
+
+        textContainer.appendChild(span);
+    });
+}
+
+document.addEventListener("mouseup", function() {
+    isDragging = false;
+});
+
+function toggleBlackout(word) {
+    if (blackoutMode) {
+        word.classList.add("blacked");
+    } else {
+        word.classList.remove("blacked");
+    }
+}
+
+function generatePoem() {
+    const words = document.querySelectorAll(".word");
+    let poem = "";
+
+    words.forEach(word => {
+        if (word.classList.contains("blacked")) {
+            const blackout = word.textContent.replace(/./g, "█");
+            poem += blackout;
+        } else {
+            poem += word.textContent;
+        }
+    });
+
+    const poemOutput = document.getElementById("poemOutput");
+    poemOutput.textContent = poem;
+
+    const borderStyle = document.getElementById("borderStyle").value;
+
+    poemOutput.classList.remove(
+        "border-none",
+        "border-solid",
+        "border-double",
+        "border-dashed"
+    );
+
+    poemOutput.classList.add("border-" + borderStyle);
+
+    const borderColor = document.getElementById("borderColor").value;
+    poemOutput.style.borderColor = borderColor;
+    poemOutput.style.color = borderColor;
+}
+
+</script>
+
+</body>
+</html>

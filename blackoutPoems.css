@@ -1,0 +1,188 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    background: #bfbfbf; /* LIGHTER */
+    color: #222;
+    text-align: center;
+    
+}
+
+/* Header / Navbar */
+header {
+    background: #000; /* black */
+    color: #fff;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Nav container */
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #000; /* ensure full black bar */
+}
+
+/* Logo */
+.logo {
+    color: #fff;
+    font-size: 24px;
+}
+
+/* Nav links container */
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+/* Nav links */
+.nav-links a {
+    color: #fff; /* white text */
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* Hover + active */
+.nav-links a:hover,
+.nav-links .active {
+    color: #00adb5; /* accent color */
+}
+
+
+/* Sections */
+.section {
+    padding: 120px 20px;
+    min-height: 100vh;
+}
+
+/* Poetry Section */
+.poetry-section {
+    background: #e9ecef; /* lighter */
+    color: #222;
+    padding: 120px 20px;
+}
+
+/* Text input */
+#manualText {
+    width: 90%; 
+    max-width: 700px;
+    height: 150px;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-top: 15px;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Upload input */
+#fileInput {
+    margin-top: 15px;
+}
+
+/* Text container */
+#textContainer {
+    margin: 40px auto;
+    width: 90%;
+    max-width: 800px;
+    line-height: 2;
+    background: #ffffff;
+    color: #111;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* Words */
+.word {
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Blacked out words */
+.blacked {
+    background: black;
+    color: black;
+    border-radius: 3px;
+}
+
+/* Output poem */
+/* Output poem */
+#poemOutput {
+    margin: 30px auto;
+    display: inline-block;  
+    min-width: 200px;
+    width: auto;          
+    max-width: 90%;          
+    background: #ffffff;
+    color: #111;
+    padding: 20px;
+    border-radius: 8px;
+    white-space: pre-wrap;
+    line-height: 1.8; 
+}
+
+/* Border styles */
+.border-none {
+    border: 3px solid transparent; /* NOT none */
+}
+
+.border-solid {
+    border: 5px solid;
+}
+
+.border-double {
+    border: 8px double;
+}
+
+.border-dashed {
+    border: 8px groove;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    border: none;
+    background: #00adb5;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+    border-radius: 6px;
+}
+
+button:hover {
+    background: #007b80;
+}
+
+/* Footer */
+footer {
+    background: #ffffff;
+    color: #222;
+    padding: 15px;
+}
+
+/* Mode switch button */
+#modeToggle {
+    margin-top: 20px;
+}
+
+/* Load button spacing */
+#textMode button {
+    margin-top: 10px;
+}
